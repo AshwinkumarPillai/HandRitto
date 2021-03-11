@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>HR | HandRitto</title>
+  </head>
+  <body>
+    <div class="popup_container" id="popup_container" onclick="closePopup()">
+      <div class="font_list popup" id="font_list"></div>
+    </div>
+    <div class="main_container">
+      <div class="main_child input_area">
+        <textarea
+          name=""
+          id="user_input_area"
+          placeholder="Write anything here for example: Ereh.. Arami..."
+          onkeyup="UserInput(this.value)"
+        ></textarea>
+        <div class="color_pallete">
+          <div class="color_circle" id="circle-0" onclick="changeColor(0)"></div>
+          <div class="color_circle" id="circle-1" onclick="changeColor(1)"></div>
+          <div class="color_circle" id="circle-2" onclick="changeColor(2)"></div>
+        </div>
+        <div class="btn_container">
+          <button onclick="openPopup(1)">Choose Font</button>
+          <button onclick="changeFont()">Change Font</button>
+        </div>
+        <div class="btn_container">
+          <button onclick="save(`MySheet${sheetNum++}`)">Download Sheet</button>
+        </div>
+      </div>
+      <div class="main_child output_area">
+        <div class="verti_range_container">
+          <input type="range" class="vertical_range" min="1" max="200" value="110" oninput="changeVerti(this.value)" />
+        </div>
+        <div>
+          <input type="range" min="1" max="200" value="110" oninput="changeHori(this.value)" />
+          <div id="sheetResultArea"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+  <script src="js/script.js"></script>
+</html>

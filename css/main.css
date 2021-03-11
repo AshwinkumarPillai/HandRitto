@@ -1,0 +1,243 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana;
+  background-color: black;
+  color: #0097e6;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------------------SCROLL BAR------------------------- */
+
+:root {
+  --scroll_bg: black;
+  --scroll_color: #0097e6;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll_color) var(--scroll_bg);
+}
+
+/* Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--scroll_bg);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll_color);
+  border-radius: 20px;
+  border: 3px solid var(--scroll_bg);
+}
+
+/* ----------------------- FONTS ----------------------- */
+@font-face {
+  font-family: font0;
+  src: url(../assets/fonts/font0.ttf);
+}
+
+@font-face {
+  font-family: font1;
+  src: url(../assets/fonts/font1.ttf);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(../assets/fonts/font2.ttf);
+}
+@font-face {
+  font-family: font3;
+  src: url(../assets/fonts/font3.ttf);
+}
+@font-face {
+  font-family: font4;
+  src: url(../assets/fonts/font4.ttf);
+}
+@font-face {
+  font-family: font5;
+  src: url(../assets/fonts/font5.ttf);
+}
+@font-face {
+  font-family: font6;
+  src: url(../assets/fonts/font6.ttf);
+}
+@font-face {
+  font-family: font7;
+  src: url(../assets/fonts/font7.ttf);
+}
+@font-face {
+  font-family: font8;
+  src: url(../assets/fonts/font8.ttf);
+}
+@font-face {
+  font-family: font9;
+  src: url(../assets/fonts/font9.ttf);
+}
+@font-face {
+  font-family: font10;
+  src: url(../assets/fonts/font10.ttf);
+}
+@font-face {
+  font-family: font11;
+  src: url(../assets/fonts/font11.ttf);
+}
+@font-face {
+  font-family: font12;
+  src: url(../assets/fonts/font12.ttf);
+}
+@font-face {
+  font-family: font13;
+  src: url(../assets/fonts/font13.ttf);
+}
+@font-face {
+  font-family: font14;
+  src: url(../assets/fonts/font14.ttf);
+}
+@font-face {
+  font-family: font15;
+  src: url(../assets/fonts/font15.ttf);
+}
+@font-face {
+  font-family: font16;
+  src: url(../assets/fonts/font16.ttf);
+}
+@font-face {
+  font-family: font17;
+  src: url(../assets/fonts/font17.ttf);
+}
+
+/* --------------------------------------------------------- */
+
+.main_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.main_child {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.input_area {
+  width: 40%;
+  border-right: 0.5px solid #626a6e;
+}
+
+.output_area {
+  width: 60%;
+  position: relative;
+  display: flex;
+}
+
+#user_input_area {
+  width: 80%;
+  height: 50vh;
+  border: 0.4px solid #0097e6;
+  padding: 10px;
+  outline: none;
+}
+
+/*------------------------- Color Pallete ----------------------------------------------- */
+
+.color_pallete {
+  margin-top: 20px;
+}
+
+.color_circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+/*------------------------- button container----------------------------------------------- */
+
+.btn_container {
+  /* text-align: left; */
+  margin-top: 30px;
+}
+
+.btn_container > button {
+  padding: 15px;
+  background-color: aliceblue;
+  cursor: pointer;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  margin-right: 15px;
+  transition: 0.3s;
+  outline: none;
+}
+
+.btn_container > button:hover {
+  transform: scale(1.05);
+  background: black;
+  border: 1px solid white;
+  color: white;
+}
+
+/*  ---------------------------------POPUP-------------------------------------------- */
+.popup_container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: none;
+}
+
+.font_list {
+  width: 60vw;
+  height: 60vh;
+  overflow-y: scroll;
+  display: none;
+  background-color: black;
+}
+
+.font_list_ele {
+  padding: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  border-bottom: 0.1px solid white;
+}
+
+.font_list_ele:hover {
+  background-color: white;
+}
+
+/* -----------------------------Alignment Input Ranges ------------------------------*/
+.verti_range_container {
+  /* border: 1px solid red; */
+  width: 70px;
+  position: relative;
+}
+
+.vertical_range {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform-origin: left;
+}
