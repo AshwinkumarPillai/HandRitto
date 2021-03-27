@@ -1,5 +1,5 @@
 // All variables to be used
-let userInpData = "Neccessity is the mother of all inventions! - Capt. Levi (maybe)";
+let userInpData = "Neccessity is the mother of all inventions!";
 let curr_sheet = "";
 let sheetNum = 1;
 
